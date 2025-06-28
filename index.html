@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Average Grade Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Average Grade Calculator</h2>
+
+  <label>Grade in Math:</label>
+  <input type="number" id="math"><br>
+
+  <label>Grade in Science:</label>
+  <input type="number" id="science"><br>
+
+  <label>Grade in English:</label>
+  <input type="number" id="english"><br>
+
+  <label>Grade in TLE:</label>
+  <input type="number" id="tle"><br>
+
+  <label>Grade in ESP:</label>
+  <input type="number" id="esp"><br>
+
+  <label>Grade in A.P:</label>
+  <input type="number" id="ap"><br>
+
+  <label>Grade in MAPEH:</label>
+  <input type="number" id="mapeh"><br>
+
+  <label>Grade in ICT:</label>
+  <input type="number" id="ict"><br>
+
+  <label>Grade in Filipino:</label>
+  <input type="number" id="filipino"><br>
+
+  <button onclick="calculateAverage()">Calculate</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function calculateAverage() {
+      const grades = [
+        +document.getElementById('math').value,
+        +document.getElementById('science').value,
+        +document.getElementById('english').value,
+        +document.getElementById('tle').value,
+        +document.getElementById('esp').value,
+        +document.getElementById('ap').value,
+        +document.getElementById('mapeh').value,
+        +document.getElementById('ict').value,
+        +document.getElementById('filipino').value
+      ];
+
+      const total = grades.reduce((sum, grade) => sum + grade, 0);
+      const average = Math.round(total / grades.length);
+
+      let remark = '';
+      if (average >= 97) {
+        remark = "With Highest Honors";
+      } else if (average >= 95) {
+        remark = "With High Honors";
+      } else if
+```
